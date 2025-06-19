@@ -1,87 +1,29 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>¡Felicidades!</title>
-    <style>
-        body {
-            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .frase {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.2);
-            font-size: clamp(2rem, 5vw, 3rem);
-            text-align: center;
-            color: #0269df;
-            max-width: 700px;
-            position: relative;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: aparecerFrase 2s ease-out forwards;
-        }
-        .firma {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            color: #2e7a80;
-            text-align: right;
-            margin-top: 20px;
-            opacity: 0;
-            transform: translateX(30px);
-            animation: aparecerFirma 5s ease-out forwards;
-            animation-delay: 2.3s;
-        }
-        .bandera {
-            position: absolute;
-            left: 20px;
-            bottom: 20px;
-            opacity: 0;
-            animation: aparecerBandera 1s ease-out forwards;
-            animation-delay: 10s;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>¡Felicidades!</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body onload="iniciarAnimacion()">
 
+        <div class="cargando" id="espera">
+            <h2>⌛ Espera, amor!... tu sorpresita está cargando 💝</h2>
+        </div>
 
-        @keyframes aparecerFrase {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes aparecerFirma {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @keyframes aparecerBandera {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+        <div class='frase' id="mensaje-final" style="display:none;">
+        ¡¡Feliz cumple, amor!!<br>Quién iba a decir que después de tanto tiempo, la vida nos juntaría así… y la verdad, le ha quedado bastante bien.
+    
+        <div class="firma"> ...te amo, Pau. 😚</div> <!-- unicode &#128538; -->
 
-    </style>
-</head>
-<body>
+            <div class="bandera">
+                <img src="https://flagcdn.com/es.svg" alt="Bandera de España" width="40">
+            </div>
+        </div>
 
-<div class='frase'>
-    ¡¡Feliz cumple, amor!!<br>Quién iba a decir que después de tanto tiempo, la vida nos juntaría así… y la verdad, le ha quedado bastante bien.
-    <div class="bandera">
-        <img src="https://flagcdn.com/es.svg" alt="Bandera de España" width="40">
-    </div>
+        <script src="animacion.js"></script>
 
-    <div class="firma"> ...te amo, Pau. 😚</div> <!-- unicode &#128538; -->
-
-</div>
-
-
-</body>
+    </body>
+    
 </html>
