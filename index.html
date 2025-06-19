@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡Felicidades!</title>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .frase {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.2);
+            font-size: 1.8em;
+            text-align: center;
+            color: #0269df;
+            max-width: 700px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: aparecerFrase 2s ease-out forwards;
+        }
+        .firma {
+            font-size: 0.7em;
+            color: #2e7a80;
+            text-align: right;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: aparecerFirma 2s ease-out forwards;
+            animation-delay: 2.3s;
+        }
+        @keyframes aparecerFrase {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes aparecerFirma {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class='frase'>
+    ¡¡Feliz cumple, amor!! Quién iba a decir que después de tanto tiempo, la vida nos juntaría así… y la verdad, le ha quedado bastante bien.
+    <div class="firma"> ...te amo, Pau. 😚</div> <!-- unicode &#128538; -->
+
+</div>
+
+</body>
+</html>
