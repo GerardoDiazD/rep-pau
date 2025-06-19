@@ -20,7 +20,7 @@
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 0 25px rgba(0,0,0,0.2);
-            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             text-align: center;
             color: #0269df;
             max-width: 700px;
@@ -30,7 +30,7 @@
             animation: aparecerFrase 2s ease-out forwards;
         }
         .firma {
-            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            font-size: clamp(1.2rem, 3vw, 2rem);
             color: #2e7a80;
             text-align: right;
             margin-top: 20px;
@@ -39,6 +39,16 @@
             animation: aparecerFirma 2s ease-out forwards;
             animation-delay: 2.3s;
         }
+        .bandera {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            opacity: 0;
+            animation: aparecerBandera 1s ease-out forwards;
+            animation-delay: 5s;
+        }
+
+
         @keyframes aparecerFrase {
             to {
                 opacity: 1;
@@ -51,15 +61,27 @@
                 transform: translateX(0);
             }
         }
+        @keyframes aparecerBandera {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
     </style>
 </head>
 <body>
 
 <div class='frase'>
-    ¡¡Feliz cumple, amor!! Quién iba a decir que después de tanto tiempo, la vida nos juntaría así… y la verdad, le ha quedado bastante bien.
+    ¡¡Feliz cumple, amor!!<br>Quién iba a decir que después de tanto tiempo, la vida nos juntaría así… y la verdad, le ha quedado bastante bien.
+    <div class="bandera">
+        <img src="https://flagcdn.com/es.svg" alt="Bandera de España" width="40">
+    </div>
+
     <div class="firma"> ...te amo, Pau. 😚</div> <!-- unicode &#128538; -->
 
 </div>
+
 
 </body>
 </html>
