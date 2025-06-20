@@ -6,13 +6,14 @@
         <title>¡Felicidades!</title>
         <link rel="stylesheet" href="estilos.css">
     </head>
-    <body onload="iniciarAnimacion()">
+
+    <body onload="iniciarAnimacion('espera','mensaje')">
 
         <div class="cargando" id="espera">
             <h2>⌛ Espera, amor!... tu sorpresita está cargando 💝</h2>
         </div>
 
-        <div class='frase' id="mensaje-final" style="display:none;">
+        <div class='frase' id="mensaje" style="display:none;">
         ¡¡Feliz cumple, amor!!<br>Quién iba a decir que después de tanto tiempo, la vida nos juntaría así… y la verdad, le ha quedado bastante bien.
     
         <div class="firma"> ...te amo, Pau. 😚</div> <!-- unicode &#128538; -->
@@ -25,5 +26,5 @@
         <script src="animacion.js"></script>
 
     </body>
-    
+
 </html>
